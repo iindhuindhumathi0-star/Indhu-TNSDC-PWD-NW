@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 30px;
+      background: black;
+      color: white;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: yellow;
+    }
+    section {
+      padding: 50px;
+      text-align: center;
+    }
+    h2 {
+      border-bottom: 2px solid black;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: white;
+      margin-top: 30px;
+    }
+    /* Skills Styling */
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    /* Contact Form */
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    button {
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: gray;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal website</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+  <img src="https://i.supaimg.com/88a151ba-9a5d-42bb-b4f4-7359f14307dc.jpg">
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Indhumathi  BSC Student at Government arts college</p>
+    <p>I have a basic knowledge of C,C++, Python</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>C++</li>
+      <li>C</li>
+      
+      
+      <li>Python</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Computer science </p>
+    <p>Government arts college</p>
+   
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return showMessage()">
+      <label>Name:</label>
+      <input type="text" required>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>Message:</label>
+      <textarea rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="msg" style="color:green; font-weight:bold;"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple form submission message
+    function showMessage() {
+      document.getElementById("msg").innerText = "Thank you! Your message has been sent.";
+      return false; // prevent actual form submission
+    }
+  </script>
+</body>
+</html>
